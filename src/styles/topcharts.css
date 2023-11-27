@@ -1,0 +1,155 @@
+.top-charts-200 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.top-charts-200  .pub {
+    position: relative;
+    height: 250px;
+    background: #262626;
+    z-index: 1;
+}
+
+.top-charts-200 .pub select {
+    position: relative;
+    padding: 0 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    top: 60px;
+    left: 10px;
+    text-align: center;
+    background-color: #262626;
+    cursor: pointer;
+    color: #fff;
+}
+
+.top-charts-200 .pub select option {
+    padding: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+.top-charts-200 .top-charts {
+    position: relative;
+    color: #fff;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: auto;
+    z-index: 1;
+}
+
+.top-charts-200 .top-charts h1 {
+    font-size: 3vh;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.top-charts-200 .top-charts .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.top-charts-200 .top-charts .right:hover {
+    color: mediumslateblue;
+}
+
+
+
+.top-charts-200 .top-charts .charts {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.top-charts-200 .top-charts .line {
+    position: relative;
+    height: 2px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #fff;
+}
+
+
+.top-charts-200 .top-charts .charts .track {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    margin: 10px;
+    padding-left: 16px;
+    padding-top: 16px;
+    height: 120px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.top-charts-200 .top-charts .charts .track:hover {
+    opacity: 0.8;
+}
+
+.top-charts-200 .top-charts .charts .track img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.top-charts-200 .top-charts .charts .track .details {
+    position: relative;
+    top: -100px;
+    left: 110px;
+    max-width: calc(90vw - 110px);
+}
+
+.top-charts-200 .top-charts .charts .track .details .title {
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.top-charts-200 .top-charts .charts .track .details .subtitle {
+    width: 100%;
+    color: #b1acac;
+}
+
+.top-charts-200 .top-charts .charts .track .details p {
+    position: relative;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 25px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.top-charts-200 .top-charts .charts .track span {
+    position: absolute;
+    font-size: 35px;
+    left: 50px;
+    top: 50px;
+    cursor: pointer;
+    background-color: #262622;
+    opacity: 0.8;
+    border-radius: 50%;
+}
+
+.top-charts-200 .top-charts .charts .track .details p:hover {
+    text-decoration: underline;
+}

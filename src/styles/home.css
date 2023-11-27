@@ -1,0 +1,207 @@
+.home .pub {
+    position: relative;
+    height: 80vh;
+    background: linear-gradient(180deg,aqua,#fff);
+    z-index: 1;
+}
+ 
+.home .pub img {
+    width: 80vw;
+    height: calc(70vh - 55px);
+    position: absolute;
+    bottom: 0;
+    right: 10vw;
+    left: 10vw;
+}
+
+@media screen and (max-width: 640px){
+    .home .pub img {
+        width: 94vw;
+        left: 3vw;
+        right: 3vw;
+    }
+    
+}
+
+.home .top-charts {
+    position: relative;
+    color: #fff;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: auto;
+    z-index: 1;
+}
+
+.home .top-charts h1 {
+    font-size: 3vh;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.home .top-charts h1 a {
+    color: #fff;
+}
+
+.home .top-charts .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.home .top-charts .right:hover a {
+    color: mediumslateblue;
+}
+
+
+
+.home .top-charts .charts {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.home .top-charts .line {
+    position: relative;
+    height: 2px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #fff;
+}
+
+
+.home .top-charts .charts .track {
+    position: relative;
+    max-width: 400px;
+    width: 400px;
+    margin: 10px;
+    padding-left: 16px;
+    padding-top: 16px;
+    height: 120px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.home .top-charts .charts .track:hover {
+    opacity: 0.8;
+}
+
+.home .top-charts .charts .track img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.home .top-charts .charts .track .details {
+    position: relative;
+    top: -100px;
+    left: 110px;
+    max-width: 290px;
+}
+
+.home .top-charts .charts .track .details .title {
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.home .top-charts .charts .track .details .subtitle {
+    width: 100%;
+    color: #b1acac;
+}
+
+.home .top-charts .charts .track .details p {
+    position: relative;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 25px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.home .top-charts .charts .track span {
+    position: absolute;
+    font-size: 35px;
+    left: 50px;
+    top: 50px;
+    cursor: pointer;
+    background-color: #262622;
+    opacity: 0.8;
+    border-radius: 50%;
+}
+
+.home .top-charts .charts .track .details p:hover {
+    text-decoration: underline;
+}
+
+.home .top-artists {
+    position: relative;
+    color: #fff;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: auto;
+    z-index: 1;
+}
+
+.home .top-artists h1 {
+    font-size: 3vh;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.home .top-artists .line {
+    position: relative;
+    height: 2px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #fff;
+}
+
+.home .top-artists .artists {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.home .top-artists .artists .artist img {
+    width: 200px;
+    height: 300px;
+}
+
+.home .top-artists .artists .artist {
+    max-width: 220px;
+    padding: 10px;
+}
+
+.home .top-artists .artists .artist p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;
+    font-size: 20px;
+    height: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.home .top-artists .artists .artist p:hover {
+    text-decoration: underline;
+}

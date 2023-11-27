@@ -1,0 +1,149 @@
+.audio .track {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(221, 221, 221, 0.2);
+    z-index: 3;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.audio .track img {
+    width: 55px;
+    height: 55px;
+    margin-left: 10px;
+    margin-top: 5px;
+    border-radius: 50%;
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+@keyframes rotation {
+    from {
+        transform: rotateZ(0deg);
+        
+    } to {
+        transform: rotateZ(360deg);
+    }
+    
+}
+
+.audio .track .details {
+    position: absolute;
+    top: -5px;
+    left: 70px;
+    max-width: 200px;
+}
+
+.audio .track .details .title {
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.audio .track .details .subtitle {
+    width: 100%;
+    color: #b1acac;
+}
+
+.audio .track .details p {
+    padding: 0;
+    position: relative;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 20px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.audio .track .details p:hover {
+    text-decoration: underline;
+}
+
+.audio .track .process {
+    position: absolute;
+    color: #fff;
+    right: calc(50vw - 225px);
+    left: calc(50vw - 225px);
+    top: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    width: 450px;
+}
+
+.audio .track .process input {
+    width: 300px;
+    cursor: pointer;
+}
+
+
+
+.audio .track .controls {
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+} 
+
+.audio .track .controls span {
+    font-size: 35px;
+    margin: auto 10px;
+    cursor: pointer;
+}
+
+.audio .track .controls span:hover {
+    color: lime;
+}
+
+
+
+@media screen and (max-width: 1200px){
+    .audio .track .process {
+        right: 300px;
+        left: auto;
+        width: 250px;
+    }
+
+    .audio .track .process input {
+        width: 120px;
+    }
+    
+}
+
+
+@media screen and (max-width: 900px){
+    .audio .track .process {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(100% - 20px);
+        text-align: center;
+    }
+    .audio .track .process input{
+        width: 60%;
+
+    }
+}
+
+@media screen and (max-width: 640px){
+    .audio .track .controls {
+        position: relative;
+        top: auto;
+        right: auto;
+        text-align: center;
+    }
+    
+}

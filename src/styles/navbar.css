@@ -1,0 +1,171 @@
+.navbar {
+    height: 50px;
+    color: #fff;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.navbar .logo {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+    float: left;
+    cursor: pointer;
+}
+
+
+.navbar .logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar .logo:hover img {
+    filter: blur(1px);
+}
+
+.navbar .nav {
+    float: left;
+    padding: 0;
+}
+
+.navbar .nav div {
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 50px;
+    color: #fff;
+    float: left;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar .nav a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navbar .nav a:hover {
+    text-decoration: underline;
+}
+
+.navbar .search{
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    float: right;
+    width: auto;
+    max-width: 245px;
+    z-index: 1;
+}
+
+.navbar .search .input,.navbar .search .input-active {
+    width: 200px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    padding: 2px;
+    outline: none;
+    border: 1px solid #fff;
+    color: #262626;
+    border-radius: 15px;
+    background-color: rgb(0, 191, 255);
+}
+
+.navbar .search .input {
+    display: none;
+}
+
+.navbar .search .input-active {
+    display: block;
+}
+
+
+
+.navbar .search span {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.navbar .menu {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    height: auto;
+    z-index: 1;
+    display: none;
+    cursor: pointer;
+}
+
+.navbar .menu div {
+    margin: 5px;
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+}
+
+@media screen and (max-width: 640px){
+    .navbar .menu {
+        display: block;
+    }
+
+    .navbar .search {
+        right: 65px;
+    }
+
+    .navbar .nav {
+        display: none;
+    }
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #262626;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+}
+
+.mobile-nav div {
+    padding: 16px;
+    text-align: center;
+}
+
+.mobile-nav a {
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 5vh;
+}
+
+.mobile-nav a:hover {
+    text-decoration: underline;
+}
+
+.mobile-nav span {
+    font-size: 7vh;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.mobile-nav span:hover {
+    color: #d1d1d1;
+}
+
+
+
+
