@@ -10,29 +10,34 @@ const formatTime = (timeInSeconds) => {
     return `${minutes}:${String(seconds).padStart(2, '0')}`;
   }
 
+
+
 const Audio = (props) => {
     const [duration,setDuration] = useState("");
-    const currentAudio = useRef(null);
+    const currentAudio = useRef();
     const [timeElasped,setTimeElasped] = useState(0);
     const [length,setLength] = useState(1);
     const [loop,setLoop] = useState(true);
     const navigation = useNavigate();
     
+    
 
     useEffect(() => {
-      
+        try {
         if (currentAudio.current !== null) {
             
            
-          if (!props.isPlaying) {
+          if (!props.isPlaying && currentAudio.current.isPlaying) {
             currentAudio.current.pause();
-          } else {
+          } else if(!currentAudio.current.isPlaying) {
             currentAudio.current.play();
           }
         }
+        } catch(error) {
+          console.error(error);
+        }
       }, [props.isPlaying]);
 
-  
   
 
     useEffect(() => {
@@ -57,7 +62,7 @@ const Audio = (props) => {
     return (
 
         <div className="audio">
-            {props.track.url !== null ? <audio src={props.track.url}  ref={currentAudio} onEnded={() => props.setIsplaying(false)} autoPlay/> : null}
+            {props.track.url !== null ? <audio src={props.track.url} ref={currentAudio} onEnded={() => props.setIsplaying(false)} autoPlay></audio> : null}
            
             
             <div className="track">
@@ -76,7 +81,8 @@ const Audio = (props) => {
                       setTimeElasped(e.target.value);
                       setDuration(formatTime(e.target.value*0.01*length));
                       props.setIsplaying(false); 
-                      currentAudio.current.currentTime = Math.floor(e.target.value*length*0.01);
+                      if(currentAudio.current !== null && isFinite(Math.floor(e.target.value*length*0.01))) {
+                       currentAudio.current.currentTime = Math.floor(e.target.value*length*0.01)};
                       props.setIsplaying(true);
                       }}/>
                     {formatTime(length) !== "NaN:NaN" ? formatTime(length) : '...'} </div>) : (<h1>No source found</h1>)  

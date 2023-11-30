@@ -1,7 +1,7 @@
 import logo from '../utils/shazam.png';
 import '../styles/navbar.css';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 
 
 
@@ -20,7 +20,7 @@ const Navbar = () => {
                 <div><a href="/">GET THE APP</a></div>
                 <div><a href="/charts/top/global">CHARTS</a></div>
             </div>
-            <form className="search" onSubmit={(e) => {e.preventDefault();window.location=`../search/${searchValue}`}}>
+            <form className="search" onSubmit={(e) => {e.preventDefault();window.location=`/search/${searchValue}`}}>
                 {
                     active === false ? (
                 <input className="input" type="text" placeholder="Search..." value={searchValue} onChange={(e) => setSearchValue(e.target.value)}/>

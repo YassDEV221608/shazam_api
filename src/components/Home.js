@@ -18,7 +18,7 @@ const Home = () => {
     const [tracksLoaded,setTracksLoaded] = useState(false);
     const navigation = useNavigate();
     useEffect(() => {
-        Promise.all([getTopCharts(20), getTopArtists(200)])
+        Promise.all([getTopCharts(20), getTopArtists(20)])
         .then(([chartsData, artistsData]) => {
           if (chartsData !== undefined) {
             setTop_charts(chartsData);
